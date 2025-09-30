@@ -5,6 +5,8 @@
  */
 package base;
 
+import java.time.Year;
+
 /**
  *
  * @author Nobilis
@@ -63,7 +65,7 @@ public class Age {
                 } else if (s[1] == 5 | s[1] == 7 | s[1] == 10 | s[1] == 12) {
                     days += 30;
                 } else {
-                    if (s[0] % 4 == 0) {
+                    if (Year.isLeap(s[0])) {
                         days += 29;
                     } else {
                         days += 28;
